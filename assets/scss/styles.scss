@@ -9,22 +9,22 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: #4070F4;
-    --second-color: #0E2431;
+    first-color: #4070F4;
+    second-color: #0E2431;
 }
 
 /*===== Fuente y tipografia =====*/
 :root{
-    --body-font: 'Poppins', sans-serif;
+    body-font: 'Poppins', sans-serif;
 
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
+   big-font-size: 2rem;
+    h2-font-size: 1.25rem;
+    normal-font-size: 0.938rem;
 
     @media screen and (min-width: 768px){
-        --big-font-size: 3.5rem;
-        --h2-font-size: 2rem;
-        --normal-font-size: 1rem;
+       big-font-size: 3.5rem;
+        h2-font-size: 2rem;
+        normal-font-size: 1rem;
     }
 }
 
@@ -55,9 +55,9 @@ html{
 }
 body{
     margin: var(--header-height) 0 0 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    color: var(--second-color);
+    font-family: var(body-font);
+    font-size: var(normal-font-size);
+    color: var(second-color);
 }
 h1,h2,p{
     margin: 0;  
@@ -80,7 +80,7 @@ img{
 .section-title{
     position: relative;
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    color: var(first-color);
     margin-top: var(--mb-2);
     margin-bottom: var(--mb-4);
     text-align: center;
@@ -94,7 +94,7 @@ img{
         right: 0;
         margin: auto;
         top: 2rem;
-        background-color: var(--first-color);
+        background-color: var(first-color);
     }
 }
 .section{
@@ -118,7 +118,7 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: #fff;
+    background-color: var(--background-color);
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
@@ -138,7 +138,7 @@ img{
             width: 80%;
             height: 100%;
             padding: 2rem;
-            background-color: var(--second-color);
+            background-color: var(second-color);
             transition: .5s;
         }
     }
@@ -147,7 +147,7 @@ img{
     }
     &__link{
         position: relative;
-        color: #fff;
+        color: var(--background-color);
 
         &:hover{
             position: relative;
@@ -159,15 +159,15 @@ img{
                 height: 0.18rem;
                 left: 0;
                 top: 2rem;
-                background-color: var(--first-color);
+                background-color: var(first-color);
             }
         }
     }
     &__logo{
-        color: var(--second-color);
+        color: var(second-color);
     }
     &__toggle{
-        color: var(--second-color);
+        color: var(second-color);
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -180,7 +180,7 @@ img{
     height: 0.18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: var(first-color);
 }
 
 /*=== Show menu ===*/
@@ -201,7 +201,7 @@ img{
         margin-bottom: var(--mb-5);
 
         &-color{
-            color: var(--first-color);
+            color: var(first-color);
         }
     }
     &__social{
@@ -211,10 +211,10 @@ img{
             width: max-content;
             margin-bottom: var(--mb-2);
             font-size: 1.5rem;
-            color: var(--second-color);
+            color: var(second-color);
 
             &:hover{
-                color: var(--first-color);
+                color: var(first-color);
             }
         }
     }
@@ -230,8 +230,8 @@ img{
 /*BUTTONS*/
 .button{
     display: inline-block;
-    background-color: var(--first-color);
-    color: #fff;
+    background-color: var(first-color);
+    color: var(--background-color);
     padding: .75rem 2.5rem;
     font-weight: var(--font-semi);
     border-radius: .5rem; 
@@ -287,7 +287,7 @@ img{
     &__icon{
         font-size: 2rem;
         margin-right: var(--mb-2);
-        color: var(--first-color);
+        color: var(first-color);
     }
     &__names{
         display: flex;
@@ -297,7 +297,7 @@ img{
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: var(--first-color);
+        background-color: var(first-color);
         height: .25rem;
         border-radius: .5rem;
         z-index: var(--z-back);
@@ -343,11 +343,11 @@ img{
 .contact{
     &__input{
         width: 100%;
-        font-size: var(--normal-font-size);
+        font-size: var(normal-font-size);
         font-weight: var(--font-semi);
         padding: 1rem;
         border-radius: .5rem;
-        border: 1.5px solid var(--second-color);
+        border: 1.5px solid var(second-color);
         outline: none;
         margin-bottom: var(--mb-4);
     }
@@ -355,7 +355,7 @@ img{
         display: block;
         border: none;
         outline: none;
-        font-size: var(--normal-font-size);
+        font-size: var(normal-font-size);
         cursor: pointer;
         margin-left: auto;
     }
@@ -363,8 +363,8 @@ img{
 
 /* ===== FOOTER =====*/
 .footer{
-    background-color: var(--second-color);
-    color: #fff;
+    background-color: var(second-color);
+    color: var(--background-color);
     text-align: center;
     font-weight: var(--font-semi);
     padding: 2rem 0;
@@ -378,7 +378,7 @@ img{
     }
     &__icon{
         font-size: 1.5rem;
-        color: #fff;
+        color: var(--background-color);
         margin: 0 var(--mb-2);
     }
 }
@@ -416,7 +416,7 @@ img{
             display: none;
         }
         &__link{
-            color: var(--second-color);
+            color: var(second-color);
         }
     }
     .home{
